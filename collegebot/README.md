@@ -1,40 +1,37 @@
-# Hotel Receptionist Chatbot
+# College Receptionist Chatbot
 
 ## Project Description:
-An AI based chatbot that provides hotel reception services to the customers. The chatbot is trained using a particular dataset. Feed-forward neural network is used to train
-the chatbot. Natural Language Toolkit (NLTK) is used to tokenize, stemming and bag-of-word creation, which helps as data/text preprocessing. Chatbot provides appropriate information to the customers for relevant queries, after being trained. This chatbot can be transformed for any arbitrary purpose just by altering the dataset.
+An AI-based chatbot designed to provide assistance to students, faculty, and visitors at Bharata Mata College of Commerce & Arts. Trained on a dataset tailored for college-related inquiries, this chatbot utilizes a feed-forward neural network for understanding and responding to user queries. The Natural Language Toolkit (NLTK) is employed for text preprocessing tasks such as tokenization, stemming, and bag-of-words creation. The chatbot is capable of providing information on college services, courses, admissions, events, and more. Its flexibility allows for adaptation to various purposes by modifying the dataset.
 
 ## Tools:
-1. Programming Language: Python
-2. Dataset Format: JSON
-3. Machine Learning Library: PyTorch
-4. Natural Language Toolkit (NLTK)
+1. **Programming Language**: Python
+2. **Dataset Format**: JSON
+3. **Machine Learning Library**: PyTorch
+4. **Natural Language Toolkit**: NLTK
 
 ## Project Details:
-* **Dataset**: "intent.json" file contains the dataset to train the model on. Every intent has a specific tag like 'greetings' or 'goodbye'. Each tag has several patterns which 
-invoke that particular intent. Several responses are also associated with each intents. Based on these patterns a random respond will selected by the bot.
-* **Data/Text Preprocessing**: "nltk_utils.py" file preprocess the dataset using Natural Language Toolkit (NLTK). Tokenize method takes a phrase and return a list of words from 
-the phrase. Stemming method stems each words i.e. "organisation" is stemmed as "organ". Bag of word method returns a boolean list that provides information on whether a given 
-list of tokenized sentence's words are available on a given list of words or not.
-* **Model**: "model.py" file uses PyTorch library to build a feed-forword neural network model with 1 hiddel layer. ReLU is used as an activation function. Width and depth of 
-the model are also provided.
-* **Training**: "train.py" file trains the model. First, it preprocess the dataset using "nltk_util.py" methods. Later, hyperparameters like number of epochs, learning rate etc
-are determined here. Based on the hyperparameters model is trained on CPU or GPU (depending on the availability) using PyTorch. Training progress and results are shown in
-console. After training state of the model is saved on "data.pth" file. 
-* **Chat**: "chat.py" is the main class for our chatbot. It loads the current trained state of our chatbot model. It greets the user and chat is begun. Until user type "quit" 
-chat will continue. For any irrelevant queries, bot will respond with "I do not understand message". For 3 consecutive failed attempt of conversation it'll provide user with 
-direct communication information of the organisation.
+- **Dataset**: The `college_receptionist_intents.json` file contains the dataset used for training the model. It includes various intents like 'greetings', 'goodbye', 'admissions', 'courses', etc., each with multiple patterns and associated responses. The bot selects a random response based on the matched intent.
+- **Data/Text Preprocessing**: The `nltk_utils.py` file handles preprocessing using NLTK, including tokenization, stemming, and creating a bag-of-words representation for text inputs.
+- **Model**: Defined in `model.py`, the model uses PyTorch to construct a feed-forward neural network with one hidden layer, employing ReLU as the activation function.
+- **Training**: The `train.py` script is responsible for training the model. It preprocesses the dataset and trains the model using hyperparameters like the number of epochs and learning rate, which can be adjusted. The model is trained on available CPU or GPU resources. Post-training, the model's state is saved to `college_receptionist_data.pth`.
+- **Chat Interface**: The `app.py` serves as the main interface for the chatbot, loading the trained model and handling user interactions through a web-based interface. The chatbot continues to converse until the user types "quit" and provides contact information after three consecutive failed attempts to understand the user's query.
 
-## Instructions to run the codes: 
-1. Install python environment (e.g. conda or venv) 
-2. Install pytorch according to your environment from https://pytorch.org 
-3. Install nltk by running the command "pip install nltk" in the terminal 
-4. Uncomment "# nltk.download('punkt') " once, for first time running nltk_utils.py.  
+## Instructions to Run the Code:
+1. Set up a Python environment (e.g., using conda or venv).
+2. Install PyTorch according to your environment from [PyTorch.org](https://pytorch.org).
+3. Install NLTK by running `pip install nltk` in the terminal.
+4. For the first run, uncomment `nltk.download('punkt')` in `nltk_utils.py` to download necessary NLTK data.
 
-## Reference: 
-1. https://www.nltk.org 
-2. https://pytorch.org
-3. https://python-engineer.com
+## How to Use:
+1. Start the Flask application by running `python app.py`.
+2. Open a web browser and navigate to `http://127.0.0.1:5000` to interact with the chatbot.
 
-## Youtube unlisted video link:
-* https://www.youtube.com/watch?v=j_hWKBWLufc
+## References:
+1. [Natural Language Toolkit (NLTK)](https://www.nltk.org)
+2. [PyTorch](https://pytorch.org)
+
+## Contributing:
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License:
+This project is licensed under the MIT License - see the LICENSE file for details.
