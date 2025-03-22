@@ -1,0 +1,137 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! What can I do for you?",
+        "Good day! How may I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Have a nice day"
+      ],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you later! Take care.",
+        "Have a nice day! Goodbye."
+      ]
+    },
+    {
+      "tag": "admissions",
+      "patterns": [
+        "How do I apply for admission?",
+        "What are the admission requirements?",
+        "When is the application deadline?",
+        "Where can I find the application form?"
+      ],
+      "responses": [
+        "You can apply for admission through our online portal. Visit our website for more details.",
+        "The admission requirements vary by program. Check our admissions page for specific details.",
+        "The application deadline for the next intake is 5th June. Make sure to submit your application on time.",
+        "You can find the application form on our official admissions page."
+      ]
+    },
+    {
+      "tag": "departments",
+      "patterns": [
+        "What departments are available?",
+        "Which courses do you offer?",
+        "Tell me about the academic programs.",
+        "What programs are there?"
+      ],
+      "responses": [
+        "We offer programs in various departments: Computer Science, Management, Languages, Physical Education, Commerce (Finance & Taxation), Commerce (Computer Applications), Post-graduate Commerce, and Social Work.",
+        "BMCCA provides diverse academic programs. You can explore them on our website.",
+        "Our departments include Computer Science, Management, and multiple Commerce specializations."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "fees details?",
+        "How much is the tuition fee?",
+        "How much is the college fees?",
+        "How much is the semester fees?",
+        "What are the course fees?",
+        "Are there any scholarships?",
+        "How can I pay my fees?"
+      ],
+      "responses": [
+        "The tuition fees for the first year 2024-25 are as follows: B Com (Finance & Taxation) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; B Com (Finance & Management) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BBA - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BCA - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; BSW - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; C/F - ₹24,000 (1st Sem), ₹21,000 (2nd Sem), Total: ₹45,000. For more details, visit the college website.",
+        "The college fees for the first year 2024-25 are as follows: B Com (Finance & Taxation) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; B Com (Finance & Management) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BBA - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BCA - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; BSW - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; C/F - ₹24,000 (1st Sem), ₹21,000 (2nd Sem), Total: ₹45,000. For more details, visit the college website.",
+        "The semester fees for the first year 2024-25 are as follows: B Com (Finance & Taxation) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; B Com (Finance & Management) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BBA - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BCA - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; BSW - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; C/F - ₹24,000 (1st Sem), ₹21,000 (2nd Sem), Total: ₹45,000. For more details, visit the college website.",
+        "We offer various scholarships. Visit our scholarships page for details.",
+        "You can pay your fees online through our portal or at the college finance office, kindly check the website."
+      ]
+    },
+    {
+      "tag": "events",
+      "patterns": [
+        "What events are happening?",
+        "Are there any upcoming events?",
+        "Tell me about the college activities.",
+        "Any special programs soon?"
+      ],
+      "responses": [
+        "Upcoming events include a Lecture by an Environmentalist on November 6, a Debate Competition on October 11, and a Five-Day Faculty Development Program starting October 23.",
+        "Check our events page for the latest updates on college activities."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact the college?",
+        "What is the college's phone number?",
+        "What is the email address?",
+        "Where is the college located?"
+      ],
+      "responses": [
+        "You can reach us at +91 9188623740 or email us at mail@bmcca.edu.in.",
+        "Our contact number is 0484-2837540.",
+        "The college is located at Choondy, Aluva, Kerala, India."
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "Where is the library?",
+        "What are the library hours?",
+        "Can I borrow books?",
+        "How do I access the library?"
+      ],
+      "responses": [
+        "The library is on the main building's second floor.",
+        "Library hours are from 9 AM to 5 PM on weekdays.",
+        "Yes, students can borrow books using their ID card."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "I need help",
+        "Can you assist me?",
+        "I have a question",
+        "I need some information"
+      ],
+      "responses": [
+        "Sure, I'm here to help! What do you need assistance with?",
+        "Of course! What can I do for you?",
+        "I'd be happy to assist. What's your question?"
+      ]
+    }
+  ]
+}

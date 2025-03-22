@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Receptionist Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .dark-mode {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            background-color: #ffffff; /* Light background for chat box */
+            box-shadow: 0 4px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .send-btn {
+            padding: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .voice-input-btn {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .voice-input-btn:disabled, .send-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div class="theme-switch" style="position: absolute; top: 20px; left: 20px;">
+        <label class="toggle-label">Switch Theme 🌗</label>
+        <label class="toggle-switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="chat-container">
+        <h1>College Receptionist Chatbot</h1>
+        <br>
+        <h3>Welcome to the Official Chatbot of Bharata Mata College of Commerce & Arts!</h3>
+        <p>Feel free to ask your questions here. This chatbot is designed to assist you with queries related to the college, courses, admissions, events, and more.</p>
+        <p>Please Note:<br/>
+        🔹 The chatbot is currently in the testing stage, so occasional errors may occur.<br/>
+        🔹 Always verify critical information on the official college website.<br/>
+        🔹 For urgent or official matters, contact the college administration directly.<br/>
+        🔹 We appreciate your patience and feedback as we continue to improve! 😊</p>
+        <br>
+        <div id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type a message...">
+            <button class="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+        <button id="voice-input-btn" class="voice-input-btn" onclick="startVoiceInput()">Voice Input</button>
+    </div>
+
+    <script>
+document.getElementById('dark-mode-toggle').addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+    } else {
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+    }
+});
+
+function sendMessage() {
+    var userInput = document.getElementById('chat-input').value;
+    if (userInput) {
+        fetch('/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: userInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+            var chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += '<p><strong>You:</strong> ' + userInput + '</p>';
+            chatBox.innerHTML += '<p><strong>Bot:</strong> ' + data.response + '</p>';
+            document.getElementById('chat-input').value = '';
+        });
+    }
+}
+
+function startVoiceInput() {
+    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.start();
+
+    recognition.onresult = function(event) {
+        var userInput = document.getElementById('chat-input');
+        userInput.value = event.results[0][0].transcript;
+        sendMessage();
+    };
+
+    recognition.onerror = function(event) {
+        console.error('Speech recognition error:', event.error);
+    };
+
+    recognition.onend = function() {
+        console.log('Speech recognition has ended.');
+    };
+}
+
+// Add an event listener for the "keydown" event on the input box
+document.getElementById('chat-input').addEventListener('keydown', function(event) {
+    // Check if the "ENTER" key was pressed
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
+</script>
+</body>
+</html>

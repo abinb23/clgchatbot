@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharata Mata College of Commerce & Arts</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fav.png">
+    
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>    `
+    <div class="header">
+        <div class="header-left">
+            <img src="images/logo.png" alt="College Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Fee Payment</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">News & Events</a></li>
+                <li><a href="#">IQAC</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="linways">Linways</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="spotlight">
+    <div class="spotlight-content">
+        <h1>Transforming Aspirations into Apex Achievements</h1>
+        <p>A vibrant tapestry of intellect and exploration, where every corner resonates with the hum of curiosity.</p>
+    </div>
+</section>
+
+<!-- Director & Principal Message Section -->
+<section class="message-section">
+    <div class="message-card">
+        <img src="images/director.jpg" alt="Executive Director">
+        <div class="message-text">
+            <h2>Executive Director's Message</h2>
+            <h3>Rev. Fr. Jacob Puthussery</h3>
+            <p>Embrace the journey of knowledge, for in the corridors of BMCCA, every step is a stride toward excellence...</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+
+    <div class="message-card reverse">
+        <img src="images/princi.png" alt="Principal">
+        <div class="message-text">
+            <h2>Principal's Message</h2>
+            <h3>Prof. Dr. Siby Mathew</h3>
+            <p>Embrace the journey of knowledge, for in the corridors of BMCCA, every step is a stride toward excellence...</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+</section>
+
+  <!-- Departments Section -->
+  <section class="departments">
+    <h2>Embark on your academic journey, explore our range of departments</h2>
+    <p>Set sail on your academic voyage, chart your course across our varied departments</p>
+
+    <div class="slider-container">
+        <button class="slider-btn left" onclick="moveSlider(-1)">&#9665;</button>
+        <div class="slider">
+            <div class="department-card">
+                <img src="management.png" alt="Management">
+                <h3>Management</h3>
+                <a href="#">View more</a>
+            </div>
+            <div class="department-card">
+                <img src="language.png" alt="Language">
+                <h3>Language</h3>
+                <a href="#">View more</a>
+            </div>
+            <div class="department-card">
+                <img src="physical-education.png" alt="Physical Education">
+                <h3>Physical Education</h3>
+                <a href="#">View more</a>
+            </div>
+            <div class="department-card">
+                <img src="commerce.png" alt="Commerce">
+                <h3>Commerce</h3>
+                <a href="#">View more</a>
+            </div>
+            <div class="department-card">
+                <img src="social-work.png" alt="Social Work">
+                <h3>Social Work</h3>
+                <a href="#">View more</a>
+            </div>
+            <div class="department-card">
+                <img src="post-graduate.png" alt="Post Graduate">
+                <h3>Post Graduate</h3>
+                <a href="#">View more</a>
+            </div>
+        </div>
+        <button class="slider-btn right" onclick="moveSlider(1)">&#9655;</button>
+    </div>
+</section>
+
+<!-- Chatbot Floating Button -->
+<a href="http://127.0.0.1:5000" class="chatbot-float">
+    <img src="images/chatbot.png" alt="Chatbot">
+</a>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-social-icons">
+        <a href="mailto:mail@bmcca.edu.in"><img src="images/gmail2.png" alt="Gmail"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram2.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/"><img src="images/facebook2.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/"><img src="images/youtube2.png" alt="YouTube"></a>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    const scrollAmount = 250; // Adjust distance per click
+    let autoScroll;
+
+    function moveSlider(direction) {
+        slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+
+        // Reset auto-scroll
+        clearTimeout(autoScroll);
+        autoScroll = setTimeout(autoLoop, 5000);
+    }
+
+    function autoLoop() {
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+            // If at the end, scroll back to start
+            slider.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+            // Otherwise, keep scrolling right
+            slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+        autoScroll = setTimeout(autoLoop, 3000);
+    }
+
+    // Start auto-looping
+    autoScroll = setTimeout(autoLoop, 3000);
+
+    // Reset position on resize to prevent snapping issues
+    window.addEventListener("resize", () => {
+        slider.scrollLeft = 0;
+    });
+});
+
+</script>
+
+</body>
+</html>
