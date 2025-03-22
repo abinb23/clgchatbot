@@ -51,11 +51,11 @@ def chat():
     _, predicted = torch.max(output, dim=1)
     tag = tags[predicted.item()]
 
-    # Debugging print statement
-    print(f"Predicted tag: {tag}")
-
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+
+    # Debugging print statement
+    print(f"Predicted tag: {tag} with confidence: {prob.item()}")
 
     if prob.item() > 0.75:
         for intent in intents['intents']:

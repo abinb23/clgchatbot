@@ -47,19 +47,35 @@
         "You can find the application form on our official admissions page."
       ]
     },
+ {
+  "tag": "departments",
+  "patterns": [
+    "What departments are available?",
+    "Which courses do you offer?",
+    "Tell me about the academic programs.",
+    "What programs are there?",
+    "What courses are available?",
+    "Which courses can I study?",
+    "List of courses"
+  ],
+  "responses": [
+    "We offer programs in various departments: Computer Science, Management, Languages, Physical Education, Commerce (Finance & Taxation), Commerce (Computer Applications), Post-graduate Commerce, and Social Work.",
+    "BMCCA provides diverse academic programs. You can explore them on our website.",
+    "Our departments include Computer Science, Management, and multiple Commerce specializations."
+  ]
+},
     {
-      "tag": "departments",
-      "patterns": [
-        "What departments are available?",
-        "Which courses do you offer?",
-        "Tell me about the academic programs.",
-        "What programs are there?"
-      ],
-      "responses": [
-        "We offer programs in various departments: Computer Science, Management, Languages, Physical Education, Commerce (Finance & Taxation), Commerce (Computer Applications), Post-graduate Commerce, and Social Work.",
-        "BMCCA provides diverse academic programs. You can explore them on our website.",
-        "Our departments include Computer Science, Management, and multiple Commerce specializations."
-      ]
+  "tag": "office_location",
+  "patterns": [
+    "where is the office",
+    "where can I find the office",
+    "office location",
+    "where is the administrative office"
+  ],
+  "responses": [
+    "The office is located in the main building, room 101.",
+    "The administrative office is on the second floor, near the library."
+   ]
     },
     {
       "tag": "fees",
