@@ -36,7 +36,9 @@
         "How do I apply for admission?",
         "What are the admission requirements?",
         "When is the application deadline?",
-        "Where can I find the application form?"
+        "Where can I find the application form?",
+        "admissions",
+        "Tell me about admissions"
       ],
       "responses": [
         "You can apply for admission through our online portal. Visit our website for more details.",
@@ -72,8 +74,6 @@
       ],
       "responses": [
         "The tuition fees for the first year 2024-25 are as follows: B Com (Finance & Taxation) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; B Com (Finance & Management) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BBA - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BCA - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; BSW - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; C/F - ₹24,000 (1st Sem), ₹21,000 (2nd Sem), Total: ₹45,000. For more details, visit the college website.",
-        "The college fees for the first year 2024-25 are as follows: B Com (Finance & Taxation) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; B Com (Finance & Management) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BBA - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BCA - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; BSW - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; C/F - ₹24,000 (1st Sem), ₹21,000 (2nd Sem), Total: ₹45,000. For more details, visit the college website.",
-        "The semester fees for the first year 2024-25 are as follows: B Com (Finance & Taxation) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; B Com (Finance & Management) - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BBA - ₹20,000 (1st Sem), ₹19,000 (2nd Sem), Total: ₹39,000; BCA - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; BSW - ₹24,000 (1st Sem), ₹20,800 (2nd Sem), Total: ₹44,800; C/F - ₹24,000 (1st Sem), ₹21,000 (2nd Sem), Total: ₹45,000. For more details, visit the college website.",
         "We offer various scholarships. Visit our scholarships page for details.",
         "You can pay your fees online through our portal or at the college finance office, kindly check the website."
       ]
@@ -131,6 +131,24 @@
         "Sure, I'm here to help! What do you need assistance with?",
         "Of course! What can I do for you?",
         "I'd be happy to assist. What's your question?"
+      ]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": [
+        "Tell me about campus facilities",
+        "What facilities are available on campus?",
+        "What amenities does the college provide?",
+        "Are there any sports facilities?",
+        "Does the campus have a library?",
+        "Is there a cafeteria on campus?",
+        "What student services are available?"
+      ],
+      "responses": [
+        "Our campus offers various facilities including a well-stocked library, modern computer labs, Wi-Fi access, and comfortable classrooms.",
+        "We have excellent sports facilities, including a playground and indoor game areas.",
+        "The campus features a cafeteria serving fresh food, a dedicated student support center, and a fully equipped auditorium for events.",
+        "Students can access research materials in our library and use computer labs for academic projects."
       ]
     }
   ]
