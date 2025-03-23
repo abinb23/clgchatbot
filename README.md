@@ -79,6 +79,8 @@ File Structure
 bash
 Copy
 Edit
+
+
 /project
 │── index.html          # Website main page  
 │── styles.css          # CSS file for styling  
@@ -96,6 +98,8 @@ Edit
 │── README.md           # Project documentation  
 │── /ui                 # UI files (HTML & static content)  
 Mission & Core Values
+
+
 Our Mission
 BMCCA aims to equip the young generation with personal and professional excellence, as well as social commitment, to meet global challenges through:
 ✅ Continuous teaching-learning-training programs.
