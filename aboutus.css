@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,42 +7,76 @@
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
-/* Header */
+/* Header Section */
+header {
+    background-color: #fcefab;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* Header Layout */
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #004080;
-    padding: 15px 50px;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
+/* College Logo (Now Clickable) */
 .logo {
-    height: 60px;
+    height: 75px;
+    cursor: pointer;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
 }
 
+/* Menu Items */
 nav ul li {
-    display: inline;
+    margin: 0 10px;
 }
 
+/* Menu Links */
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #222;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
     font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
+/* Hover effect for menu items except Linways */
+nav ul li a:not(.linways):hover {
+    background-color: #d3d3d3;
+}
+
+/* Linways Button */
 .linways {
-    background-color: #ffcc00;
-    padding: 5px 10px;
+    display: inline-block;
+    padding: 8px 15px;
+    border: 2px solid red;
+    background-color: red;
+    color: white !important;
     border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Linways Button Hover Effect */
+.linways:hover {
+    background-color: red;
+    color: white !important;
 }
 
 /* About Us Section */
@@ -51,12 +85,25 @@ nav ul li a {
     background-color: #ffffff;
 }
 
+/* Section 1 Styling */
+#section-1 {
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+/* Section 2 Styling */
+#section-2 {
+    background-color: #ffffff; /* Light gray background for differentiation */
+}
+
+/* Container for Page Width */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* About Us Content Layout */
 .about-content {
     display: flex;
     align-items: center;
@@ -64,25 +111,31 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
+/* About Us Image */
 .about-image {
-    max-width: 50%;
+    max-width: 47%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* About Us Text */
 .about-text {
     flex: 1;
 }
 
-.about-text h2 {
-    font-size: 32px;
+/* Center the H2 and Increase Size */
+#section-1 h2 {
+    text-align: center;
+    font-size: 35px; /* Increase size */
     font-weight: bold;
     color: #222;
-    margin-bottom: 15px;
+    margin-bottom: 70px;
 }
 
+
+/* About Us Paragraphs */
 .about-text p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8;
     color: #555;
     margin-bottom: 15px;
@@ -91,4 +144,54 @@ nav ul li a {
 /* Reverse Layout for Second Section */
 .reverse {
     flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 80%;
+    }
+}
+
+/* Chatbot Floating Button */
+.chatbot-float {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+}
+
+.chatbot-float img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.chatbot-float img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social-icons img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1);
 }

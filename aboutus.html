@@ -14,85 +14,128 @@
 <body>
 
 <!-- Header Section -->
-<header>
+<header> 
     <div class="header">
         <div class="header-left">
-            <img src="images/logo.png" alt="College Logo" class="logo">
+            <!-- College Logo -->
+            <a href="/home.html">
+                <img src="images/logo.png" alt="College Logo" class="logo">
+            </a>   
         </div>
+        <!-- Navigation Menu -->
         <nav>
             <ul>
-                <li><a href="#">About</a></li>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/aboutus.html">About Us</a></li>
                 <li><a href="#">Departments</a></li>
-                <li><a href="#">Academics</a></li>
                 <li><a href="#">Activities</a></li>
                 <li><a href="#">Fee Payment</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">News & Events</a></li>
                 <li><a href="#">IQAC</a></li>
                 <li><a href="#">Contact</a></li>
+                <!-- Linways Button -->
                 <li><a href="#" class="linways">Linways</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- About Us Section -->
-<section class="about-us">
+<!-- About Us Section - Introduction -->
+<!-- About Us Section 1 -->
+<section id="section-1" class="about-us">
+    <h2>Bharata Mata College of Commerce and Arts</h2>
     <div class="container">
         <div class="about-content">
-            <img src="images/college-building.jpg" alt="Bharata Mata College" class="about-image">
+            <!-- About Us Image -->
+            <img src="/images/clg1.jpeg" alt="Bharata Mata College" class="about-image">
             <div class="about-text">
-                <h2>Bharata Mata College of Commerce and Arts</h2>
+                <!-- About Us Title -->
+
                 <p>
-                    Bharata Mata College of Commerce and Arts, Choondy, Aluva, established in 2014, 
-                    is a private self-financing co-educational degree college of commerce and arts 
-                    in the unaided sector, owned and managed by the Archdiocese of Ernakulam-Angamaly. 
-                    BMCCA Choondy developed her wings and started her flight under the patronage of 
-                    His Eminence Cardinal Mar George Alencherry with His Excellency Mar Sebastian 
-                    Adayanthrath and His Excellency Mar Jose Puthenveettil as co-patrons.
+                    Bharata Mata College of Commerce and Arts, Choondy, Aluva, established in 2014, is a private self-financing degree college of commerce and arts in the unaided sector, owned and managed by the Archdiocese of Ernakulam-Angamaly. Located near Choondy Junction, Aluva, it is easily accessible from Aluva, Perumbavoor, and Ernakulam.
                 </p>
                 <p>
-                    The endeavor to start BMCCA was successfully executed through the untiring effort 
-                    and imagination of Rev. Fr. Varghese Kalapparambath, the then corporate manager of 
-                    Bharata Mata Group of Institutions. The college is affiliated with Mahatma Gandhi 
-                    University, Kottayam, and is recognized by the Govt. of Kerala.
+                    The college offers degree courses in English, Computer Application, and Business Administration along with Commerce, with specializations in Taxation, Marketing, and Computer Application.The college is affiliated with Mahatma Gandhi University, Kottayam, 
+                    and is recognized by the Govt. of Kerala.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Second Section -->
-<section class="about-us">
+<!-- About Us Section 2 - Location & Courses -->
+<section id="section-2" class="about-us">
     <div class="container">
         <div class="about-content reverse">
-            <img src="images/students.jpg" alt="Students in Library" class="about-image">
+            <!-- About Us Second Image -->
+            <img src="/images/clg2.jpeg" alt="Students in Library" class="about-image">
             <div class="about-text">
                 <p>
-                    The college is located near Choondy Junction, Aluva and is easily accessible 
-                    from Aluva, Perumbavoor, and Ernakulam. Though it has a semi-urban location, 
-                    the college caters to the educational dreams and aspirations of socially, 
-                    educationally, and economically marginalized sections of a rural population 
-                    belonging to different communities from places like Vazhakkulam, Pookkattupady, 
-                    Chunagamvely, and so on.
+                    Our mission is to equip the young generation with personal and professional excellence as well as social commitment to meet global challenges through continuous teaching-learning-training programs and value-based activities, ensuring satisfaction for all. BMCCA's core values include respect for all, integrity and honesty, innovation and creativity, and a passion for achieving new heights.
                 </p>
                 <p>
-                    The college has degree courses in English, Computer Application, and Business 
-                    Administration along with Commerce, with specializations in streams like 
-                    Taxation, Marketing, and Computer Application.
-                </p>
-                <p>
-                    Keeping in mind the lofty vision of the founder of Bharata Mata Group of 
-                    Institutions, BMCCA strives to serve the people in and around Choondy, upholding 
-                    high Christian values without compromising the secular character of the college. 
-                    As BMCCA enters her sixth year of inception in 2020, she is determined to scale 
-                    greater heights as an institution of higher learning so as to fulfill her motto 
-                    ‘for God and Country’.
+                    Our quality policy is to achieve and sustain exemplary standards in education by improving student success through a structured coaching system, competitive and committed teachers, effective teaching methodologies. BMCCA upholds high Christian values.
                 </p>
             </div>
         </div>
     </div>
 </section>
+
+
+
+<!-- Chatbot Floating Button -->
+<a href="http://127.0.0.1:5000" class="chatbot-float">
+    <img src="images/chatbot.png" alt="Chatbot">
+</a>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-social-icons">
+        <a href="mail@bmcca.edu.in"><img src="images/gmail2.png" alt="Gmail"></a>
+        <a href="https://www.instagram.com/bharatamatacollege/"><img src="images/instagram2.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/bmccaofficial/"><img src="images/facebook2.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/@bharatamatacollegeofcommer4404/featured"><img src="images/youtube2.png" alt="YouTube"></a>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    const scrollAmount = 250; // Adjust distance per click
+    let autoScroll;
+
+    function moveSlider(direction) {
+        slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+
+        // Reset auto-scroll
+        clearTimeout(autoScroll);
+        autoScroll = setTimeout(autoLoop, 5000);
+    }
+
+    function autoLoop() {
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+            // If at the end, scroll back to start
+            slider.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+            // Otherwise, keep scrolling right
+            slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+        autoScroll = setTimeout(autoLoop, 3000);
+    }
+
+    // Start auto-looping
+    autoScroll = setTimeout(autoLoop, 3000);
+
+    // Reset position on resize to prevent snapping issues
+    window.addEventListener("resize", () => {
+        slider.scrollLeft = 0;
+    });
+});
+
+</script>
 
 </body>
 </html>

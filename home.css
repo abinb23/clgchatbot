@@ -25,7 +25,7 @@ header {
 }
 
 .logo {
-    height: 80px;
+    height: 75px;
 }
 
 nav ul {
@@ -44,6 +44,13 @@ nav ul li a {
     padding: 10px 15px;
     display: block;
     font-weight: bold;
+    border-radius: 5px; /* Smooth corners */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for menu items except Linways */
+nav ul li a:not(.linways):hover {
+    background-color: #d3d3d3; /* Light grey background on hover */
 }
 
 .linways {
@@ -95,7 +102,8 @@ nav ul li a {
 
 /* Message Section */
 .message-section {
-    margin-top: 55px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,13 +173,13 @@ nav ul li a {
 
 .departments h2 {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .departments p {
     font-size: 18px;
     color: #666;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 /* Slider */
@@ -181,6 +189,7 @@ nav ul li a {
     align-items: center;
     overflow: hidden;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .slider {
