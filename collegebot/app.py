@@ -63,7 +63,7 @@ def chat():
                 response = random.choice(intent['responses'])
                 return jsonify({"response": response})
     else:
-        return jsonify({"response": "I do not understand..."})
+        return jsonify({"response": "I do not understand...please check the website"})
 
 @app.route('/ui/<path:filename>')
 def custom_static(filename):

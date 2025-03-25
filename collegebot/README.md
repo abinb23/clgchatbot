@@ -1,37 +1,143 @@
-# College Receptionist Chatbot
+Bharata Mata College of Commerce and Arts - Website & Chatbot
+Project Overview
+This project consists of:
 
-## Project Description:
-An AI-based chatbot designed to provide assistance to students, faculty, and visitors at Bharata Mata College of Commerce & Arts. Trained on a dataset tailored for college-related inquiries, this chatbot utilizes a feed-forward neural network for understanding and responding to user queries. The Natural Language Toolkit (NLTK) is employed for text preprocessing tasks such as tokenization, stemming, and bag-of-words creation. The chatbot is capable of providing information on college services, courses, admissions, events, and more. Its flexibility allows for adaptation to various purposes by modifying the dataset.
+A responsive website providing information about Bharata Mata College of Commerce and Arts (BMCCA).
 
-## Tools:
-1. **Programming Language**: Python
-2. **Dataset Format**: JSON
-3. **Machine Learning Library**: PyTorch
-4. **Natural Language Toolkit**: NLTK
+An AI-powered chatbot, deployed separately and accessible from the website to assist students, faculty, and visitors with common queries.
 
-## Project Details:
-- **Dataset**: The `college_receptionist_intents.json` file contains the dataset used for training the model. It includes various intents like 'greetings', 'goodbye', 'admissions', 'courses', etc., each with multiple patterns and associated responses. The bot selects a random response based on the matched intent.
-- **Data/Text Preprocessing**: The `nltk_utils.py` file handles preprocessing using NLTK, including tokenization, stemming, and creating a bag-of-words representation for text inputs.
-- **Model**: Defined in `model.py`, the model uses PyTorch to construct a feed-forward neural network with one hidden layer, employing ReLU as the activation function.
-- **Training**: The `train.py` script is responsible for training the model. It preprocesses the dataset and trains the model using hyperparameters like the number of epochs and learning rate, which can be adjusted. The model is trained on available CPU or GPU resources. Post-training, the model's state is saved to `college_receptionist_data.pth`.
-- **Chat Interface**: The `app.py` serves as the main interface for the chatbot, loading the trained model and handling user interactions through a web-based interface. The chatbot continues to converse until the user types "quit" and provides contact information after three consecutive failed attempts to understand the user's query.
+Website & Chatbot Integration
+How It Works
+1️⃣ Deploy the chatbot first (so it can be accessed via the website).
+2️⃣ Run the website, which redirects users to the chatbot for queries.
 
-## Instructions to Run the Code:
-1. Set up a Python environment (e.g., using conda or venv).
-2. Install PyTorch according to your environment from [PyTorch.org](https://pytorch.org).
-3. Install NLTK by running `pip install nltk` in the terminal.
-4. For the first run, uncomment `nltk.download('punkt')` in `nltk_utils.py` to download necessary NLTK data.
+Technologies Used
+Frontend: HTML, CSS, JavaScript
 
-## How to Use:
-1. Start the Flask application by running `python app.py`.
-2. Open a web browser and navigate to `http://127.0.0.1:5000` to interact with the chatbot.
+Backend: Python (Flask for chatbot)
 
-## References:
-1. [Natural Language Toolkit (NLTK)](https://www.nltk.org)
-2. [PyTorch](https://pytorch.org)
+Machine Learning: PyTorch (for chatbot)
 
-## Contributing:
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Natural Language Processing (NLP): NLTK
 
-## License:
-This project is licensed under the MIT License - see the LICENSE file for details.
+Hosting/Deployment: npm (for chatbot), Live Server (for website)
+
+Step 1: Deploy the Chatbot
+Install Dependencies
+Ensure Python and Node.js are installed, then run:
+
+bash
+Copy
+Edit
+pip install flask torch nltk speechrecognition gtts
+npm install
+Download NLTK Data
+Run the following in Python:
+
+python
+Copy
+Edit
+import nltk
+nltk.download('punkt')
+Train the Model (if needed)
+bash
+Copy
+Edit
+python train.py
+Run the Chatbot Server
+Start the Flask Server
+
+bash
+Copy
+Edit
+python app.py
+This will start the chatbot at http://127.0.0.1:5000
+
+Deploy Chatbot Using npm (if needed)
+
+bash
+Copy
+Edit
+npm start
+The chatbot will now be accessible for integration with the website.
+
+Step 2: Run the Website
+How to Set Up the Website
+Ensure the chatbot is running at http://127.0.0.1:5000.
+
+Download or clone this repository.
+
+Open the project folder in VS Code.
+
+Install the Live Server extension if not already installed.
+
+Right-click index.html and select "Open with Live Server".
+
+The website will open in your browser, and the chatbot link will now work.
+
+File Structure
+bash
+Copy
+Edit
+/project
+│── index.html          # Website main page  
+│── styles.css          # CSS file for styling  
+│── script.js           # JavaScript functionalities  
+│── /images             # Folder for college images  
+│── /assets             # Additional resources (if any)  
+│── app.py              # Flask application (chatbot interface)  
+│── chat.py             # Handles text and voice input  
+│── college_receptionist_intents.json   # Chatbot intents & responses  
+│── model.py            # Neural network architecture  
+│── nltk_utils.py       # NLP utility functions  
+│── train.py            # Training script  
+│── package.json        # npm configuration for chatbot deployment  
+│── server.js           # Node.js file for deploying chatbot  
+│── README.md           # Project documentation  
+│── /ui                 # UI files (HTML & static content)  
+Mission & Core Values
+Our Mission
+BMCCA aims to equip the young generation with personal and professional excellence, as well as social commitment, to meet global challenges through:
+✅ Continuous teaching-learning-training programs.
+✅ Value-based activities for overall development.
+
+Core Values
+✔ Respect for All
+✔ Integrity & Honesty
+✔ Innovation & Creativity
+✔ Relentless Passion for Excellence
+✔ Quality as a Continuous Process
+
+Quality Policy
+Our goal is to maintain exemplary standards in education by:
+
+Structured coaching system
+
+Competitive and committed faculty
+
+Effective teaching & evaluation
+
+Continuous improvement for student success
+
+Future Enhancements
+🚀 Website Improvements
+✅ Responsive Design: Optimized for mobile & tablet users.
+✅ SEO Optimization: Improve online visibility.
+✅ Student Portal: Add a contact form & login system.
+
+🤖 Chatbot Upgrades
+✅ Voice Interaction: Enable speech-based queries.
+✅ More FAQs: Improve accuracy with additional data.
+✅ Deployment on Cloud: Host chatbot using npm & cloud services.
+
+Contributing
+Pull requests are welcome! If you want to suggest improvements, please open an issue to discuss your idea before submitting a major change.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Acknowledgments
+🙏 Thanks to Bharata Mata College for their support.
+🚀 Special thanks to the developers of PyTorch, NLTK, Flask, JavaScript, and npm for their amazing tools.
+
+✅ Now, the chatbot is deployed first before the website runs, ensuring proper redirection! 🚀 Let me know if you need any tweaks! 🎯

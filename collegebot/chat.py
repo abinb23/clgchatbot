@@ -95,8 +95,8 @@ while True:
                 print(f"{bot_name}: {response}")
                 speak(response)
     else:
-        print(f"{bot_name}: I do not understand...")
-        speak("I do not understand...")
+        print(f"{bot_name}: I do not understand...please check the website")
+        speak("I do not understand...please check the website")
         flag += 1
         if flag == 3:
             contact_info = "Please try to Contact us. Telephone: +8802985910454. Email: info@grandbangladeshhotel.com"
